@@ -1,0 +1,17 @@
+<header class="header">
+  <h1>Course Page</h1>
+</header>
+
+<div class="course-container" >
+  <div class="course-title">
+    <span>{{ course.title }}</span>
+  </div>
+  <div class="course-description">
+    {{ course.description }}
+  </div>
+  <div class="course-details">
+<!--    <span>Instructor: {{ course.instructor }}</span>-->
+    <span>Duration: {{ course.duration }}</span>
+  </div>
+  <button class="enroll-button" (click)="enrollCourse()">Enroll</button>
+</div>
