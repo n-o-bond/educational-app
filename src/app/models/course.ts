@@ -4,5 +4,5 @@ export class Course {
   description: string = '';
   instructor: string = '';
   duration: string = '';
-  startDate?: Date = new Date();
+  startDate?: string = '';
 }

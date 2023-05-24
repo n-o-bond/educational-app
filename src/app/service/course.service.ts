@@ -13,7 +13,7 @@ export class CourseService {
       description: 'This is the description for Course 1',
       instructor: 'Mari',
       duration: '2 weeks',
-      startDate: new Date('2023-06-01')
+      startDate: new Date('2023-06-01').toLocaleDateString()
     },
     {
       id: 2,
@@ -21,7 +21,7 @@ export class CourseService {
       description: 'This is the description for Course 2',
       instructor: 'Instructor 2',
       duration: '1 month',
-      startDate: new Date('2023-05-27')
+      startDate: new Date('2023-05-27').toLocaleDateString()
     },
     {
       id: 3,
@@ -36,7 +36,7 @@ export class CourseService {
       description: 'This is the description for Course 4',
       instructor: 'Instructor 4',
       duration: '2 months',
-      startDate: new Date('2023-06-27')
+      startDate: new Date('2023-06-27').toLocaleDateString()
     },
     {
       id: 5,
@@ -51,7 +51,7 @@ export class CourseService {
       description: 'This is the description for Course 6',
       instructor: 'Instructor 6',
       duration: '6 weeks',
-      startDate: new Date('2023-07-14')
+      startDate: new Date('2023-07-14').toLocaleDateString()
     }
   ]
 
