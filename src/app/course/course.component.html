@@ -1,20 +1,20 @@
-<header class="header">
-  <h1>Course Details</h1>
-</header>
-
-<div class="course-container" >
+<div class="" *ngIf = 'course'>
   <div class="course-title">
     <span>{{ course.title }}</span>
   </div>
+  <div *ngIf = 'enabledDetails'>
   <div class="course-description">
     {{ course.description }}
   </div>
   <div class="course-description">
-    <p>Start date: {{ course?.startDate }}</p>
+    <p>Start date: {{ course.startDate }}</p>
   </div>
   <div class="course-details">
-    <span>Instructor: {{ course?.instructor }}</span>
+    <span>Instructor: {{ course.instructor }}</span>
     <span>Duration: {{ course.duration }}</span>
   </div>
-  <button (click)="enrollCourse()" class="enroll-button">Enroll</button>
+  </div>
+  <a [routerLink]="['/course', course.id]" class="details-button" *ngIf = '!enabledDetails'>Show details</a>
+    <button (click)="enrollCourse()" *ngIf = "!hasEnroll" class="enroll-button">Enroll</button>
+  <p *ngIf="hasEnroll" class="success-message">Enrollment Successful!</p>
 </div>

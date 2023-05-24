@@ -17,70 +17,12 @@ body {
   font-size: 24px;
   margin: 0;
 }
+
 .course-container {
   max-width: 800px;
   margin: 20px auto;
   padding: 20px;
   background-color: #f2f2f2;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.course-title {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.course-description {
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-
-.course-details {
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 20px;
-}
-
-.course-details span {
-  margin-right: 10px;
-}
-
-.enroll-button {
-  display: inline-block;
-  background-color: #2C136D;
-  color: #fff;
-  padding: 7px 15px;
-  border-radius: 4px;
-  text-decoration: none;
-  font-size: 16px;
-  transition: background-color 0.3s;
-}
-
-.enroll-button:hover {
-  background-color: #0056b3;
-}
-
-.details-button {
-  display: inline-block;
-  /*background-color: #cccccc;*/
-  color:#666666;
-  padding: 5px 10px;
-  margin-right: 10px;
-  border-radius: 4px;
-  text-decoration: none;
-  transition: background-color 0.3s;
-}
-
-.details-button:hover {
-  color: #cccccc;
-}
-
-.success-message {
-  background-color: #dff0d8;
-  color: #3c763d;
-  padding: 10px;
-  border-radius: 4px;
-  margin-top: 10px;
 }
 

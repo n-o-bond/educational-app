@@ -1,6 +1,8 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {CourseService} from "../service/course.service";
+import {UserService} from "../service/user.service";
+import {Course} from "../models/course";
 
 @Component({
   selector: 'app-course',
@@ -9,23 +11,21 @@ import {CourseService} from "../service/course.service";
 })
 export class CourseComponent implements OnInit {
 
-  courseId: number | null = null;
-  course: any;
+  @Input() course!: Course;
+  @Input() hasEnroll!: boolean;
+  @Input() enabledDetails!: boolean;
 
   constructor(
     private route: ActivatedRoute,
-    private courseService: CourseService
+    private userService: UserService
   ) {}
 
   enrollCourse() {
-    this.courseService.enrollCourse(this.course);
+      if(this.course) {
+        this.userService.enrollCourse(this.course);
+      }
   }
 
   ngOnInit() {
-    const idParam = this.route.snapshot.paramMap.get('id');
-    if(idParam){
-      this.courseId = +idParam;
-      this.course = this.courseService.getCourseById(this.courseId);
-    }
   }
 }

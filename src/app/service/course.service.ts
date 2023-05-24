@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Course} from "../models/course";
 import {Observable, of} from "rxjs";
-import {UserService} from "./user.service";
 
 @Injectable({
   providedIn: 'root'
@@ -36,7 +35,8 @@ export class CourseService {
       title: 'Course 4',
       description: 'This is the description for Course 4',
       instructor: 'Instructor 4',
-      duration: '2 months'
+      duration: '2 months',
+      startDate: new Date('2023-06-27')
     },
     {
       id: 5,
@@ -44,6 +44,14 @@ export class CourseService {
       description: 'This is the description for Course 5',
       instructor: 'Instructor 5',
       duration: '4 weeks'
+    },
+    {
+      id: 6,
+      title: 'Course 6',
+      description: 'This is the description for Course 6',
+      instructor: 'Instructor 6',
+      duration: '6 weeks',
+      startDate: new Date('2023-07-14')
     }
   ]
 
@@ -55,13 +63,5 @@ export class CourseService {
     return this.courses.find(course => course.id === courseId);
   }
 
-  enrollCourse(course: Course) {
-    if (course) {
-      this.userService.enrollCourse(course);
-    }
-  }
-
-  constructor(
-    private userService: UserService
-  ) {}
+  constructor() {}
 }
