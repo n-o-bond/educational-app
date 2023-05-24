@@ -1,12 +1,8 @@
-import { Instructor } from './instructor';
-
 export interface Course {
   id: number;
   title: string;
   description: string;
-  //todo:
-  // instructor?: Instructor;
+  instructor: string;
   duration: string;
-  //todo:
   startDate?: Date;
 }

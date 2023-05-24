@@ -4,14 +4,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { CourseComponent } from './course/course.component';
-import { UserComponent } from './user/user.component';
-import { EnrollFormComponent } from './enroll-form/enroll-form.component';
 import {RouterModule, Routes} from "@angular/router";
+import { EnrolledCoursesComponent } from './enrolled-courses/enrolled-courses.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  { path: 'course/:id', component: CourseComponent }
+  { path: 'course/:id', component: CourseComponent },
+  { path: 'enrolled-courses', component: EnrolledCoursesComponent }
 ];
 
 @NgModule({
@@ -19,8 +19,7 @@ const routes: Routes = [
     AppComponent,
     HomeComponent,
     CourseComponent,
-    UserComponent,
-    EnrollFormComponent
+    EnrolledCoursesComponent
   ],
   imports: [
     BrowserModule,

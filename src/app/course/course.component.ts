@@ -1,6 +1,6 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
-import {CourseService} from "../course.service";
+import {CourseService} from "../service/course.service";
 
 @Component({
   selector: 'app-course',
@@ -9,16 +9,16 @@ import {CourseService} from "../course.service";
 })
 export class CourseComponent implements OnInit {
 
-  // @Input()
   courseId: number | null = null;
   course: any;
 
-  constructor(private route: ActivatedRoute, private courseService: CourseService){
-  }
+  constructor(
+    private route: ActivatedRoute,
+    private courseService: CourseService
+  ) {}
 
   enrollCourse() {
-    // Implement your enrollment logic here
-    console.log('Enrolling in course:', this.course.title);
+    this.courseService.enrollCourse(this.course);
   }
 
   ngOnInit() {

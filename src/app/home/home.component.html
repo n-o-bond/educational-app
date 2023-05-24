@@ -1,19 +1,11 @@
 <header class="header">
 <h1>Available Courses</h1>
 </header>
-<!--<div *ngFor="let course of courses">-->
-<!--  <app-course [course]="course"></app-course>-->
-<!--</div>-->
-
 <div class="course-container">
   <div class="course" *ngFor="let course of courses">
     <div class="course-title">{{ course.title }}</div>
     <div class="course-description">{{ course.description }}</div>
-<!--    <div class="course-details">-->
-<!--      <span>Instructor: {{ course.instructor }}</span>-->
-<!--      <span>Duration: {{ course.duration }}</span>-->
-<!--    </div>-->
     <a [routerLink]="['/course', course.id]" class="details-button">Show details</a>
-    <a [routerLink]="['/course', course.id]" class="enroll-button">Enroll</a>
+    <button (click)="enrollCourse(course)" class="enroll-button">Enroll</button>
   </div>
 </div>

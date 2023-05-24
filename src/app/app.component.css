@@ -1,0 +1,29 @@
+nav {
+  display: flex;
+  justify-content: right;
+  background: #333333;
+  padding-top: 10px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.nav-link {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.nav-link:hover {
+  background-color: #eee;
+}

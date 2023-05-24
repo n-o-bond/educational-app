@@ -1,5 +1,5 @@
 <header class="header">
-  <h1>Course Page</h1>
+  <h1>Course Details</h1>
 </header>
 
 <div class="course-container" >
@@ -9,9 +9,12 @@
   <div class="course-description">
     {{ course.description }}
   </div>
+  <div class="course-description">
+    <p>Start date: {{ course?.startDate }}</p>
+  </div>
   <div class="course-details">
-<!--    <span>Instructor: {{ course.instructor }}</span>-->
+    <span>Instructor: {{ course?.instructor }}</span>
     <span>Duration: {{ course.duration }}</span>
   </div>
-  <button class="enroll-button" (click)="enrollCourse()">Enroll</button>
+  <button (click)="enrollCourse()" class="enroll-button">Enroll</button>
 </div>
