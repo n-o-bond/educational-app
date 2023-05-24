@@ -1,10 +1,8 @@
-import {Component, Input, OnInit, Output} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {CourseService} from "../service/course.service";
 import {UserService} from "../service/user.service";
 import {Course} from "../models/course";
-import {CourseComponent} from "../course/course.component";
-import {User} from "../models/user";
 
 @Component({
   selector: 'app-course-view',
@@ -14,7 +12,7 @@ import {User} from "../models/user";
 export class CourseViewComponent implements OnInit {
 
   courseId: number | null = null;
-  course: any;
+  course!: Course;
   enrolledCourses: Set<Course> = this.userService.getEnrolledCourses();
 
   constructor(

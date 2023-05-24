@@ -1,19 +1,18 @@
 import { Injectable } from '@angular/core';
 import {Course} from "../models/course";
-import {User} from "../models/user";
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-  user: User = new User;
+  enrolledCourses: Set<Course> = new Set<Course>();
 
   enrollCourse(course: Course) {
-    this.user.enrolledCourses.add(course);
+    this.enrolledCourses.add(course);
   }
 
   getEnrolledCourses() {
-    return this.user.enrolledCourses;
+    return this.enrolledCourses;
   }
 
   constructor() {

@@ -59,9 +59,14 @@ export class CourseService {
     return of(this.courses);
   }
 
-  getCourseById(courseId: number){
-    return this.courses.find(course => course.id === courseId);
-  }
+  getCourseById(courseId: number): Course {
+    let foundCourse = this.courses.find(course => course.id === courseId);
+    if (typeof foundCourse !== undefined) {
+      return (foundCourse as Course);
+    }
+    console.log("There is no course with id=" + courseId);
+    return new Course();
+   }
 
   constructor() {}
 }
